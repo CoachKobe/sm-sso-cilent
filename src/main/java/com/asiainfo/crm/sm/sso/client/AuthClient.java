@@ -227,7 +227,23 @@ public class AuthClient implements Filter {
         String pageUrl = url.substring(index + contextPath.length());
         return pageUrl;
     }
-    
+    /**
+     * 单点登陆认证过滤器核心方法
+     * @Function: AuthClient::doFilter
+     * @Description: 该函数的功能描述
+     * @param req
+     * @param resp
+     * @param filterChain
+     * @throws IOException
+     * @throws ServletException
+     * @version: v1.0.0
+     * @author: liaomi
+     * @date: 2018年8月13日 下午5:02:28 
+     *
+     * Modification History:
+     * Date         Author          Version            Description
+     *-------------------------------------------------------------
+     */
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain filterChain)
         throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) req;
